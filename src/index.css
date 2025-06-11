@@ -1,3 +1,174 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Global styles for Parfums des Îles */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+  --offwhite: #F9F5F0;
+  --gold: #CBA65D;
+  --powder: #EFCFCF;
+  --tropical: #99BFA3;
+  --softblack: #2C2C2C;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: var(--offwhite);
+  color: var(--softblack);
+  background-image: radial-gradient(circle at 25% 25%, rgba(255,255,255,0.6), transparent 60%),
+    linear-gradient(135deg, #ffffff, var(--powder));
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  margin: 0 0 1rem 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.question-block {
+  background: rgba(255,255,255,0.7);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.question-title {
+  font-size: 1.25rem;
+  color: var(--softblack);
+  margin-bottom: 1rem;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.option {
+  flex: 1 1 calc(50% - 1rem);
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  background: rgba(255,255,255,0.5);
+}
+
+.option:hover {
+  background: var(--powder);
+}
+
+.option.checked {
+  background: var(--tropical);
+  color: #fff;
+}
+
+.option input {
+  display: none;
+}
+
+.submit-btn {
+  margin-top: 2rem;
+  background: var(--gold);
+  color: var(--softblack);
+  border: none;
+  border-radius: 25px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.submit-btn:disabled {
+  background: #ccc;
+  color: #888;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: var(--softblack);
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.results-card {
+  background: rgba(255,255,255,0.7);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.result-item {
+  margin-bottom: 1rem;
+}
+
+.result-bar {
+  width: 100%;
+  height: 10px;
+  background: #eee;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.result-bar span {
+  display: block;
+  height: 100%;
+  background: var(--tropical);
+}
+
+.poem {
+  background: rgba(249,245,240,0.6);
+  padding: 1.5rem;
+  border-radius: 16px;
+  font-style: italic;
+  margin: 2rem 0;
+}
+
+.cta-btn {
+  background: var(--gold);
+  border: none;
+  color: var(--softblack);
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.app {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+*** End EOF
