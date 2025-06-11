@@ -6,7 +6,7 @@ import Results from './components/Results';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-pink-50 to-green-50">
+      <div className="app">
         <Routes>
           <Route path="/" element={<Quiz />} />
           <Route path="/results" element={<Results />} />
