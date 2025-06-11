@@ -1,16 +1,66 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Parfums des Îles - Quiz Personnalisé</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parfums des Îles - Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/index.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Parfums des Îles</h1>
+    <form id="quiz-form">
+      <div class="question-block">
+        <h2 class="question-title">🌞 Quelle ambiance évoque votre parfum idéal ?</h2>
+        <div class="options">
+          <label class="option"><input type="radio" name="q1" value="mysterieuse">Une soirée étoilée et mystérieuse</label>
+          <label class="option"><input type="radio" name="q1" value="matin">Un matin doux et fleuri</label>
+          <label class="option"><input type="radio" name="q1" value="escapade">Une escapade sauvage et ensoleillée</label>
+          <label class="option"><input type="radio" name="q1" value="cocooning">Un moment cocooning à la maison</label>
+        </div>
+      </div>
+      <div class="question-block">
+        <h2 class="question-title">🌺 Quelles senteurs vous attirent le plus ?</h2>
+        <div class="options">
+          <label class="option"><input type="radio" name="q2" value="florales">Florales et délicates</label>
+          <label class="option"><input type="radio" name="q2" value="fruitees">Fruitées et gourmandes</label>
+          <label class="option"><input type="radio" name="q2" value="boisees">Boisées et chaleureuses</label>
+          <label class="option"><input type="radio" name="q2" value="epicees">Épicées et audacieuses</label>
+        </div>
+      </div>
+      <div class="question-block">
+        <h2 class="question-title">🌴 Quel lieu vous inspire le plus ?</h2>
+        <div class="options">
+          <label class="option"><input type="radio" name="q3" value="plage">Une plage bordée de cocotiers</label>
+          <label class="option"><input type="radio" name="q3" value="jardin">Un jardin tropical luxuriant</label>
+          <label class="option"><input type="radio" name="q3" value="foret">Une forêt profonde</label>
+          <label class="option"><input type="radio" name="q3" value="ville">Une ville vibrante et exotique</label>
+        </div>
+      </div>
+      <div class="question-block">
+        <h2 class="question-title">💫 Quelle intensité préférez-vous ?</h2>
+        <div class="options">
+          <label class="option"><input type="radio" name="q4" value="leger">Très légère, presque imperceptible</label>
+          <label class="option"><input type="radio" name="q4" value="douce">Douce et subtile</label>
+          <label class="option"><input type="radio" name="q4" value="equilibree">Présente mais équilibrée</label>
+          <label class="option"><input type="radio" name="q4" value="intense">Intense et envoûtante</label>
+        </div>
+      </div>
+      <div class="question-block">
+        <h2 class="question-title">💖 Quel mot décrit le mieux votre personnalité ?</h2>
+        <div class="options">
+          <label class="option"><input type="radio" name="q5" value="solaire">Solaire</label>
+          <label class="option"><input type="radio" name="q5" value="mysterieux">Mystérieux.se</label>
+          <label class="option"><input type="radio" name="q5" value="elegant">Élégant.e</label>
+          <label class="option"><input type="radio" name="q5" value="passionne">Passionné.e</label>
+        </div>
+      </div>
+      <button id="submit-btn" class="submit-btn" disabled>🌸 Découvrir ma fragrance idéale</button>
+    </form>
+  </div>
+  <script src="quiz.js"></script>
+</body>
 </html>
